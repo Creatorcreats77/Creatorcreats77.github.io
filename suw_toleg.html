@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öý telefon</title>
+    <link rel="stylesheet" href="./css and js/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css and js/css/navabar.css">
+    <!-- <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" href="./css and js/css/style.css">
+</head>
+<body>
+    <div class="bg-primary">
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href=""><svg  height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="./index.html">Baş sahypa</a></li>
+                <li><a href="./Tmcell.html">TMcell</a></li>
+                <li><a href="./gas_toleg.html">Gaz tölegi</a></li>
+                <li><a href="./tok_toleg.html">Elektrik tölegi</a></li>
+                <li><a href="./pocta_yollary.html">Poçta ýollamalary</a></li>
+                
+            </ul>
+            <ul>
+                <li><a href=""><img style="width: 50px;" src="./img/water.jpg" alt=""></a></li>
+                <li class="hideOnMobile"><a href="./index.html">Baş sahypa</a></li>
+                <li class="hideOnMobile"><a href="./Tmcell.html">TMcell</a></li>
+                <li class="hideOnMobile"><a href="./gas_toleg.html">Gaz tölegi</a></li>
+                <li class="hideOnMobile"><a href="./tok_toleg.html">Elektrik tölegi</a></li>
+                <li class="hideOnMobile"><a href="./pocta_yollary.html">Poçta ýollamalary</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+        <div class="container-xl">
+            <div class="text-center display-1 fw-bold text-white">
+                SANLY TÖLEG
+            </div>
+            <div class="text-center h1 text-white p-3">
+                programmasy arkaly oturan ýeriňden töle
+            </div>
+        </div>
+        </div>
+        <div class="container-xl">
+            <div class="shadow w-100 p-5">
+                <div class="text-start">
+                    <form>
+                        <input class="letter_for_tm_cell pe-3" type="text" id="name" name="name" required placeholder="Ady we familiýasy"><br><br>
+                        <input class="letter_for_tm_cell pe-3" type="tel" id="phone" name="phone" required placeholder="Suw kesgitleýji"><br><br>
+                        <select>
+                            <optgroup label="Welaýat">
+                             <option  value="Lebap">Lebap</option>
+                              <option value="Ahal">Ahal</option>
+                              <option value="Asgabat">Aşgabat</option>
+                              <option value="Balkan">Balkan</option>
+                              <option value="Dasoguz">Daşoguz</option>
+                              <option value="Mary">Mary</option>
+                            </optgroup>
+                        </select>
+                
+                <br><br>
+                
+                        <input class="letter_for_tm_cell pe-3" type="text" id="place" name="place" placeholder="Salgy" required><br><br>
+                        <input class="letter_for_tm_cell pe-3" type="number" id="number1" name="number1" placeholder="öňki görkezijiler m3" required><br><br>
+                        <input class="letter_for_tm_cell pe-3" type="number" id="number2" name="number2" placeholder="häzirki görkezijiler m3" required><br><br>
+                    </form>
+                    <button onclick="Kart_hasaby()" class="tolemek btn btn-primary text-white shadow mb-2" type="submit" disabled>
+                        Kart goş
+                    </button>
+                    <form id="kart_hasaby">
+                        <input class="letter_for_tm_cell mb-1 mb-lg-3 ps-3" type="number" placeholder="Kartyň belgisi" id="bir" required>
+                        <br>
+                        <input class="letter_for_tm_cell mb-1 mb-lg-3 ps-3" type="number" placeholder="Mohleti" id="iki" required>
+                        <br>
+                        <input class="letter_for_tm_cell mb-1 mb-lg-3 ps-3" type="number" placeholder="CVC" id="uc" required>
+                        <br>
+                        <input  class="letter_for_tm_cell mb-1 mb-lg-3 ps-3" type="text" placeholder="Kartyn eyesi" id="dort" required style="text-transform: uppercase;">
+                        <button class="tolemek btn btn-primary text-white shadow mb-1 mb-lg-3" onclick="Toleg_gecirmeli()">
+                            Tolemek
+                        </button>
+                    </form>
+                   
+                </div>
+                
+            </div>
+        </div>
+        <script src="./css and js/js/suw_toleg.js"></script>
+        <script src="./css and js/js/navbar.js"></script>
+        <script src="./css and js/js/bootstrap.bundle.min.js.map"></script>
+</body> 
+</html>

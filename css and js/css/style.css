@@ -1,0 +1,30 @@
+.tolemek{
+    font-size: 24px;
+}
+.col-4{
+    width: 20%;
+}
+.radius{
+    border-radius: 15 30;
+}
+.letter_for_tm_cell{
+    font-size: 24px;
+}
+#kart_hasaby{
+    display: none;
+}
+.hover_a:hover{
+    color: blue;
+}
+
+@media (max-width: 600px){
+    .tolemek{
+        font-size: 12px;
+    }
+    .col-4{
+        width: 30%;
+    }
+    .letter_for_tm_cell{
+        font-size: 14px;
+    }
+}
