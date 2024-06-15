@@ -349,6 +349,8 @@ h4{
     gap: 2em;
 }
 
+
+
 .fly-item {
     position: absolute;
     height: 16px;
@@ -368,10 +370,7 @@ nav .fly-item {
     background-color: var(--primary-color);
 }
 
-.header-nav .right {
-    position: relative;
-    margin-left: auto;
-}
+
 .header-nav .right .icon-large{
     position: relative;
 }
@@ -382,6 +381,7 @@ nav .fly-item {
     background-color: var(--secondary-dark-color);
     border-radius: var(--percent50);
 }
+
 .mega .flexcol {
     flex: 1;
     min-width: 180px;
@@ -1145,15 +1145,36 @@ SEARCH
 
 
 /* logo 7 */
-.logo_nav{
-    width: 80px;
-    object-fit: contain;
+
+.logo_nav_container {
+    position: absolute;
+    bottom: -63px;
+    right: -32px;
+    width: 108px;
 }
+
+.header-nav .right {
+    position: relative;
+}
+
+
+.header-nav .wrapper {
+    position: relative;
+    height: 42px;
+    
+}
+
+.header-nav .left {
+    position: relative;
+    margin-right: auto;
+}
+
 
 @media screen and (min-width: 481px) {
     .products.main .item {
         flex: 0 0 50%;
     }
+    
 }
 
 
@@ -1169,6 +1190,12 @@ SEARCH
     }
     .products.main .item {
         flex: 0 0 33.3333%;
+    }
+    .logo_nav_container {
+        position: absolute;
+        bottom: -63px;
+        right: -36px;
+        width: 108px;
     }
 }
 
@@ -1194,6 +1221,7 @@ SEARCH
     .header-nav .right li > a{
         margin-left: 1em;
     }
+    
 
     /* mega menu */
     nav .mega {
@@ -1362,5 +1390,43 @@ SEARCH
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+
+
+    /* header nav logo */
+    .logo_nav_container {
+        position: absolute;
+        bottom: -63px;
+        right: -32px;
+        width: 108px;
+    }
+
+    .header-nav .right_desktop {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .header-nav .right_desktop ul
+    {
+        display: flex;
+        gap: 2em;
+    }
+    .header-nav .right_desktop ul li a:hover{
+        text-decoration: underline;
+        color: green;
+
+    }
+
+
+    .header-nav .wrapper {
+        position: relative;
+        height: 64px;
+    }
+
+    .header-nav .left_desktop {
+        position: relative;
+        margin-right: auto;
+        margin-left: 48px;
     }
 }
