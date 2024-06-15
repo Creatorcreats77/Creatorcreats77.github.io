@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7 logo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 100%;
+        }
+        .box img{
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <div class="box">
+        <img  src="./7 logo svg/7.2.svg" alt="">
+    </div>
+
+    <script>
+        for(let i=0; i<28; i++){
+            const box = document.querySelector(".box")
+            if (i==1){
+                box.innerHTML = `<img style="background-color: green;" src="./7 logo svg/7.${1}.svg" alt="">`
+            }
+            if (i!=1){
+                box.innerHTML += `<img src="./7 logo svg/7.${i}.svg" alt="">`
+            }
+            
+        }
+        
+    </script>
 </body>
 </html>
