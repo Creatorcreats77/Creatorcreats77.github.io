@@ -1427,6 +1427,6 @@ SEARCH
     .header-nav .left_desktop {
         position: relative;
         margin-right: auto;
-        margin-left: 48px;
+        margin-left: 0;
     }
 }
