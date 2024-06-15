@@ -6,6 +6,7 @@
     --primary-color: #ff6b6b;
     --secondary-color: #794afa;
     --secondary-dark-color: #453c5c;
+    --bg-color-green: rgb(17, 184, 17);
 
     --white-color: #ffffff;
     --light-bg-color: #f2f3f5;
@@ -1145,6 +1146,9 @@ SEARCH
 
 
 /* logo 7 */
+.header-nav {
+    background-color: var(--bg-color-green);
+}
 
 .logo_nav_container {
     position: absolute;
@@ -1160,8 +1164,7 @@ SEARCH
 
 .header-nav .wrapper {
     position: relative;
-    height: 42px;
-    
+    height: 62px;
 }
 
 .header-nav .left {
@@ -1421,7 +1424,8 @@ SEARCH
 
     .header-nav .wrapper {
         position: relative;
-        height: 64px;
+        height: 72px;
+        background-color: var;
     }
 
     .header-nav .left_desktop {
