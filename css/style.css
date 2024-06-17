@@ -883,37 +883,7 @@ form.search button:hover{
 
 
 
-/* BIG PRODUCTS */
 
-.products.big .item {
-    flex-direction: column;
-    padding: 2.5em;
-    border: 2px solid var(--secondary-dark-color);
-    border-radius: 7px;
-    max-width: 460px;
-    margin: 0 auto;
-}
-
-
-
-/* MINI Products */
-
-.products.mini .item {
-    margin-bottom: 2em;
-}
-.products.mini .media {
-    width: 130px;
-    height: 160px;
-    margin-right: 1.25em;
-}
-.products.mini .content {
-    margin: 0;
-    gap: 0.75em;
-}
-
-.products:where(.mini, .main) h3 {
-    font-weight: 400;
-}
 
 
 
@@ -929,50 +899,6 @@ form.search button:hover{
     height: 390px;
 }
 
-/* Banner */
-
-.banners .item {
-    position: relative;
-    background-color: var(--white-color);
-    border: 1px solid --border-color;
-}
-.banner .image {
-    text-align: right;
-}
-.banner .get-gray {
-    background-color: var(--border-color);
-}
-.banner :where(.text-content, .over-link) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: var(--percent100);
-    height: var(--percent100);
-}
-.banner .text-content {
-    padding: 1.5em 2.5em;
-}
-
-.banner h3 {
-    font-size: calc(1em + 0.5vw);
-    font-weight: var(--fw3);
-}
-.banner h3 span {
-    font-size: 80%;
-}
-.banner .primary-button {
-    z-index: 3;
-}
-
-
-.banners .product-categories .item {
-    display: flex;
-    padding: 1.5em;
-    border: 1px solid var(--border-color);
-}
-.banners .product-categories .image{
-    max-width: 150px;
-}
 .mini-links ul {
     font-size: var(--font-small);
     color: var(--light-text-color);
@@ -985,31 +911,6 @@ form.search button:hover{
     text-decoration: underline;
 }
 
-
-/* FOOTER */
-
-/* Newsletter */
-.newsletter {
-    padding: 2.5em 0;
-    background-color: var(--dark-color);
-    color: var(--white-color);
-}
-.newsletter h3 {
-    font-size: 1.5em;
-}
-
-.newsletter p {
-    font-weight: var(--fw3);
-    color: var(--border-color);
-    margin: 0.5em 0 1.5em;
-}
-.newsletter p strong {
-    color: var(--primary-color);
-}
-.newsletter form {
-    min-width: 500px;
-    width: var(--percent100);
-}
 
 
 /* Widgets */
@@ -1173,37 +1074,6 @@ SEARCH
 }
 
 
-/* SEARCH BOX */
-
-.search-box{
-    margin-left: 2em;
-}
-
-/* button call and sms */
-
-.buttons_container{
-    display: flex;
-    justify-content: end;
-    gap: 1em;
-}
-
-.sms, .call{
-    padding: 5px 7px;
-    border: none;
-    border-radius: 5px;
-    color: var(--white-color);
-    cursor: pointer;
-    font-size: var(--font-smaller);
-}
-.sms{
-    background-color: blue;
-}
-.call{
-background-color: var(--bg-color-green);
-}
-:where(.sms, .call) span{
-    padding-left: 2px;
-}
 
 @media screen and (min-width: 481px) {
     .products.main .item {

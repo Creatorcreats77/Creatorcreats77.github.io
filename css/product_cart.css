@@ -1,0 +1,79 @@
+/* SEARCH BOX */
+
+.search-box{
+    margin-left: 2em;
+}
+
+/* button call and sms */
+
+.buttons_container{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.sms, .call{
+    padding: 5px 7px;
+    border: 1px solid;
+    border-radius: 5px;
+    
+    cursor: pointer;
+    font-size: var(--font-smaller);
+}
+.sms{
+    background-color: rgb(255, 255, 255);
+    color: rgb(53, 171, 218);
+}
+.sms:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(53, 171, 218);
+    transition: .5s;
+}
+.call{
+    background-color: var(--bg-color-green);
+    color: white;
+}
+
+.call:hover{
+    color: var(--bg-color-green);
+    background-color: white;
+}
+
+:where(.sms, .call) span{
+    padding-left: 2px;
+}
+
+
+.content{
+    position: relative;
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+.main-links, .price, .mini-text {
+    margin: 5px 0 5px 5px;
+}
+
+
+
+/* MINI Products */
+
+
+.products.mini .media {
+    width: 130px;
+    height: 160px;
+    margin-right: 1.25em;
+}
+
+.products:where(.mini, .main) h3 {
+    font-weight: 400;
+}
+
+.tmt {
+    color: #ff6b6b;
+}
+
+.trending .item{
+    margin: 1em 0;
+}
+
