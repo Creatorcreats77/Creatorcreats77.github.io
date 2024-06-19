@@ -60,10 +60,22 @@ for (let  i = 0; i<API_products.length; i++){
 products_list.innerHTML +=product_example;
 }
 
-const items = document.querySelectorAll(".item");
-
-for (const item of items) {
-    item.addEventListener("click", function(){
-        console.log(items[item]);
-    })
+function open_close(){
+    let products_main_first = document.getElementById("products_main_first")
+        products_main_first.classList.remove("open")
+        products_main_first.classList.add("hide")
+    let product_widely = document.getElementById("product_widely")
+        product_widely.classList.remove("hide")
+        product_widely.classList.add("open")
 }
+const items = document.querySelectorAll(".item");
+items.forEach((item) => item.addEventListener('click', open_close));
+// for (let i = 0; i<items; i++) {
+//     items[i].addEventListener("click", function(){
+//         console.log(items[i]);
+//         let products_main_first = document.getElementById("products_main_first")
+//         products_main_first.classList.remove("open")
+//         products_main_first.classList.add("hide")
+//     })
+// }
+

@@ -1,8 +1,12 @@
+.hide {
+    display: none;
+}
+.open{
+    display: block;
+}
 .container_img {
     padding: 5px;
     min-width: 280px;
-    max-width: 500px;
-    min-height: 200px;
     border: 4px dotted var(--border-color);
 }
 .center{
@@ -25,8 +29,11 @@ justify-content: center;
     display: flex;
     justify-content: space-between;
 }
-
-:where(.main_content, b, p, .flexwrap, .buttons_container_2){
+.flexwrap_2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+:where(.main_content, b, p, .flexwrap_2, .buttons_container_2){
     margin: 10px 4px;
 }
 .sms_2, .call_2{

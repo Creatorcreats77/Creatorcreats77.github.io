@@ -1328,4 +1328,10 @@ SEARCH
         margin-right: auto;
         margin-left: 0;
     }
+    .container_img {
+        display: flex;
+        height: 600px;
+    }
+      
+
 }
