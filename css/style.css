@@ -206,12 +206,12 @@ h4{
     background-color: var(--secondary-dark-color);
     color: var(--white-color);
 }
-.view-all {
+/* .view-all {
     font-size: var(--font-small);
     display: flex;
     gap: 1em;
     transition: var(--trans-color);
-}
+} */
 
 .mini-text {
     font-size: var(--font-smaller);
@@ -261,7 +261,7 @@ h4{
 
 /* HEADER TOP */
 
-.header-top .wrapper {
+/* .header-top .wrapper {
     font-size: var(--font-small);
     font-weight: var(--fw3);
     justify-content: space-between;
@@ -281,19 +281,19 @@ h4{
     border: 1px solid var(--border-color);
     z-index: 1;
     display: none;
-}
+} */
 
-:where(.header-top, .thetop-nav) .right ul ul li a {
+:where(.thetop-nav) .right ul ul li a {
     padding: 0.25em 1em;
 }
 
-:where(.header-top, .thetop-nav) .right ul ul li.current a {
+:where( .thetop-nav) .right ul ul li.current a {
     background-color: var(--border-color);
 }
 
-.header-top li:hover ul{
+/* .header-top li:hover ul{
     display: block;
-} 
+}  */
 
 
 
@@ -318,10 +318,9 @@ h4{
     position: relative;
     font-weight: var(--fw8);
     display: flex;
-
     margin-right: 2em;
 }
-
+/* 
 .circle {
     position: absolute;
     top: -15px;
@@ -331,9 +330,9 @@ h4{
     border-radius: var(--percent50);
     background-color: var(--light-bg-color);
     z-index: -1;
-}
+} */
 
-.circle::before{
+/* .circle::before{
     content: '';
     position: absolute;
     width: 28px;
@@ -343,7 +342,7 @@ h4{
     bottom: 5px;
     right: 5px;
     opacity: .4;
-}
+} */
 
 .header-nav nav > ul {
     line-height: 100px;
@@ -562,7 +561,6 @@ form.search button:hover{
     font-weight: var(--fw3);
     line-height: 28px;
     padding-left: 3em;
-
     height: auto;
     max-height: 0;
     overflow: hidden;
@@ -665,7 +663,7 @@ form.search button:hover{
 
 /* Brands */
 
-.brands .wrapper {
+/* .brands .wrapper {
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 2em 0;
@@ -677,7 +675,7 @@ form.search button:hover{
 
 .brands .item a:hover img {
     opacity: 1;
-}
+} */
 
 
 /* Product Block Style */
@@ -704,7 +702,7 @@ form.search button:hover{
 
 /* GLOBAL PRODUCT */
 
-.products .offer {
+/* .products .offer {
     text-align: center;
     margin-bottom: 1.5em;
 }
@@ -731,7 +729,7 @@ form.search button:hover{
     position: absolute;
     right: -0.6em;
     color: var(--light-text-color);
-}
+} */
 .products :where(.image, .thumbnail) img {
     transition: transform .3s;
 }
@@ -781,25 +779,25 @@ form.search button:hover{
     transition-delay: .1s;
 }
 
-.products .discount {
+/* .products .discount {
     top: auto;
     right: 0;
     left: auto;
     bottom: 0;
     background-color: transparent;
     z-index: 1;
-}
-.products .discount::before {
-    background-color: var(--dark-color);
-}
-.products .discount span {
+} */
+    /* .products .discount::before {
+        background-color: var(--dark-color);
+    } */
+/* .products .discount span {
     position: relative;
     top: 12px;
     left: 0;
     font-size: var(--font-smaller);
     font-weight: var(--fw5);
     color: var(--white-color);
-}
+} */
 .products .content {
     display: flex;
     flex-direction: column;
@@ -808,17 +806,17 @@ form.search button:hover{
     gap: 1em;
     margin-top: 1.25em;
 }
-.products .rating {
+/* .products .rating {
     display: flex;
     align-items: center;
     gap: 0.5em;
-}
-.products .rating .stars {
-    width: 80px;
-    height: 20px;
+} */
+/* .products .stars {
+    width: 800px;
+    height: 200px;
 
-}
-.products .stars .ri-star-fill{
+} */
+.stars .ri-star-fill{
     color: rgb(235, 197, 82);
     font-weight: var(--fw8);
     padding-right: 1px;
@@ -845,44 +843,40 @@ form.search button:hover{
     color: var(--light-text-color);
     text-decoration: line-through;
 }
-.products .stock .qty{
+/* .products .stock .qty{
     display: flex;
     justify-content: space-between;
-}
-.products .stock .bar {
+} */
+/* .products .stock .bar {
     height: 3px;
     margin-top: 1em;
     background-color: var(--border-color);
     overflow: hidden;
-}
-.products .stock .available {
+} */
+/* .products .stock .available {
     height: 3px;
     width: 21%;
     background-color: var(--secondary-color);
-}
-
+} */
 
 
 .products .item {
     display: flex;
     position: relative;
 }
-.products .stock-danger {
+/* .products .stock-danger {
     color: var(--primary-color);
-}
+} */
+
+
+
+
+
 
 .flexwrap .row {
     flex: 0 0 100%;
     width: 100%;
-    margin-bottom: 2em;
 }
-
-
-
-
-
-
-
 
 
 
@@ -1089,7 +1083,6 @@ SEARCH
         font-size: 1.25em;
     }
     .products.mini,
-    .banner .row,
     .widgets .row{
         flex: 0 0 50%;
     }

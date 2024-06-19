@@ -1,0 +1,61 @@
+.container_img {
+    padding: 5px;
+    min-width: 280px;
+    max-width: 500px;
+    min-height: 200px;
+    border: 4px dotted var(--border-color);
+}
+.center{
+    display: flex;
+    align-items: center;
+}
+.center_2{
+    display: flex;
+justify-content: center;
+}
+
+.container_img img {
+    width: 100%;
+    object-fit : cover;
+}
+.flex-end{
+    justify-content: space-between;
+}
+.buttons_container_2{
+    display: flex;
+    justify-content: space-between;
+}
+
+:where(.main_content, b, p, .flexwrap, .buttons_container_2){
+    margin: 10px 4px;
+}
+.sms_2, .call_2{
+    width: 48%;
+    padding: 10px 0;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--font-small);
+}
+.sms_2{
+    background-color: rgb(255, 255, 255);
+    color: rgb(53, 171, 218);
+}
+.sms_2:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(53, 171, 218);
+    transition: .5s;
+}
+.call_2{
+    background-color: var(--bg-color-green);
+    color: white;
+}
+
+.call_2:hover{
+    color: var(--bg-color-green);
+    background-color: white;
+}
+
+:where(.sms_2, .call_2) span{
+    padding-left: 2px;
+}

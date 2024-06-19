@@ -46,10 +46,10 @@ const swiper = new Swiper('.swiper', {
     pagination : {
         el: '.swiper-pagination',
     },
-  });
+  });   
 
 const yyldyz = `<i class="ri-star-fill"></i>`;
-const star= document.querySelectorAll(".products .stars");
+const star= document.querySelectorAll(".stars");
 star.forEach((stars) => stars.innerHTML = yyldyz.repeat(5))
 
 const searchButton = document.querySelector(".t-search"),
