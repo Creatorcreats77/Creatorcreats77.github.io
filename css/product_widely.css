@@ -37,6 +37,8 @@ justify-content: center;
     margin: 10px 4px;
 }
 .sms_2, .call_2{
+    display: flex;
+    justify-content: center;
     width: 48%;
     padding: 10px 0;
     border: 1px solid;

@@ -1,18 +1,46 @@
 let API_products = [
     {
         number : 0,
-        img_a : ["./assets/products/shoe1-3.jpg", "./assets/products/shoe1-2.jpg", "./assets/products/shoe1-3.jpg"],
-        name_of_product: "Black Womens coat",
-        current_price : 1298,
-        about_product  : "Onume eyle beyle suna menzes nesip bolsa gowy bolar "
+        img_a : ["./img/0.jpg", "./img/0.1.jpg", "./img/0.2.jpg", "./img/0.3.jpg"],
+        name_of_product: "Balyk tutulýan tor",
+        current_price : 160,
+        about_product  : "Balyk Tor. 16 deşikli. Içine iým salyp goýaýmaly. Içine giren balyklar yzyna çykyp bilmeýär. Alana nesip etsin gaty gowy zat! Bahasy 160m Oňuşyk bolar geliberiň"
     },
 
     {
         number : 1,
-        img_a : ["./assets/products/shoe1-2.jpg"],
-        name_of_product: "Black Womens coat",
-        current_price : 129,
-        about_product  : "Onume eyle beyle suna menzes nesip bolsa gowy bolar "    
+        img_a : ["./img/1.jpg", "./img/1.1.jpg", "./img/1.2.jpg"],
+        name_of_product: "Bitcoin Moneta",
+        current_price : 150,
+        about_product  : "Bitcoin Moneta. Suwenir pul hökmünde güýji ýok"    
+    },
+    {
+        number : 2,
+        img_a : ["./img/2.jpg", "./img/2.1.jpg", "./img/2.2.jpg"],
+        name_of_product: "Kapilka Zalotisty",
+        current_price : 100,
+        about_product  : "Kapilka Original Lakly. Suw sepseňem hiç zat bolmaýar. Oňuşyk bar"    
+    },
+    {
+        number : 3,
+        img_a : ["./img/3.jpg", "./img/3.1.jpg", "./img/3.2.jpg"],
+        name_of_product: "Pepelnisa",
+        current_price : 70,
+        about_product  : "Pepelnisa Suratdaky ýaly bet!"    
+    },
+    {
+        number : 4,
+        img_a : ["./img/4.jpg", "./img/4.1.jpg", "./img/4.2.jpg","./img/4.3.jpg","./img/4.4.jpg","./img/4.5.jpg"],
+        name_of_product: "Bil oňurga göneldiji",
+        current_price : 200,
+        about_product  : "Bil Oňurga göneldiji. Yzygiderli maşklaryň netijesinde grižada peýdasy bar. 4 derejede egrilýar. Gaty gowy maslahat berýän!"    
+    },
+    {
+        number : 5,
+        img_a : ["./img/5.jpg", "./img/5.1.jpg", "./img/5.2.jpg"],
+        name_of_product: "Telefon podstawka",
+        current_price : 50,
+        about_product  : "Telefon podstawka ýygnalýan ýanyňda götermäge gaty gowy prosta bet!"    
     },
 
 
@@ -21,10 +49,12 @@ let API_products = [
 
 
 let products_list = document.getElementById("products_list");
+const yyldyz = `<i class="ri-star-fill"></i>`;
 let product_example; 
 let product_widely_example;
 let swiper_div;
 let swiper_div_adder;
+
 
 
 // creating products from API_products
@@ -51,11 +81,11 @@ for (let  i = 0; i<API_products.length; i++){
                     <span class="current">${API_products[i].current_price}<span class="tmt"> TMT</span></span>
                 </div>
                 <div class="mini-text">
-                    <p>${API_products[i].about_product}</p>
+                    <p>${API_products[i].about_product.substring(0,98)}...</p>
                 </div>
                     <div class="buttons_container">
-                        <button class="sms"><i class="ri-message-2-fill"></i><span>SMS etmek</span></button>
-                        <button class="call"><i class="ri-phone-fill"></i><span>Jaň etmek</span>    </button>
+                    <button class="sms"><i class="ri-message-2-fill"></i><span>SMS etmek</span></button>
+                    <button class="call"><i class="ri-phone-fill"></i><span>Jaň etmek</span></button>
                     </div>
             </div>
         </div>
@@ -66,9 +96,29 @@ function swiper_div_count(a){
     
     for (let i = 0; i<API_products[a].img_a.length; i++){
         let place = API_products[a].img_a[i]
-        console.log(place)
-     swiper_div = `<div class="swiper-slide"><img src="${place}" alt=""></div>`
-        swiper_div_adder += swiper_div;
+        swiper_div = `<div class="swiper-slide"><img src="${place}" alt=""></div>`
+        swiper_div_adder = swiper_div;
+
+        let wide_projuct_place = document.getElementById("widely_product")
+        wide_projuct_place.innerHTML +=swiper_div_adder;
+
+
+
+        product_widely_example =
+`
+    <b>${API_products[a].name_of_product}</b>
+    <p>${API_products[a].about_product}</p>
+    <div class="flexwrap_2 flex-end">
+    <div class="stars"></div>
+    <div><span>${API_products[a].current_price}</span> TMT</div>
+    </div>
+        <div class="buttons_container_2">
+        <a href="sms:+99364629645;?&body=Salam%20${API_products[a].number}%20belgili%20harydyňyz%20barmy?" class="sms_2"><i class="ri-message-2-fill"></i><span>SMS etmek</span></a>
+        <a href="tel:+99364629645" class="call_2"><i class="ri-phone-fill"></i><span>Jaň etmek</span></a>
+    </div>
+  
+`
+
     }
     
 
@@ -76,22 +126,9 @@ function swiper_div_count(a){
 
 
 
-
-product_widely_example =
-`
-    <b>Balyk tutylyan tor</b>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum laboriosam minima possimus laudantium repellat voluptatum autem illo, hic aspernatur, velit animi saepe neque laborum obcaecati veritatis. Aperiam eius sit ab necessitatibus incidunt laudantium soluta nisi eaque ratione. Alias officia, qui cumque repudiandae, voluptatibus quasi aut impedit, at atque nulla consequuntur.</p>
-    <div class="flexwrap_2 flex-end">
-    <div class="stars"></div>
-    <div><span>0</span> TMT</div>
-    </div>
-        <div class="buttons_container_2">
-    <button class="sms_2"><i class="ri-message-2-fill"></i><span>SMS etmek</span></button>
-    <button class="call_2"><i class="ri-phone-fill"></i><span>Jaň etmek</span>    </button>
-    </div>
-  
-`
     products_list.innerHTML +=product_example;
+    const star= document.querySelectorAll(".stars");
+star.forEach((stars) => stars.innerHTML = yyldyz.repeat(5))
 }
 
 function open_close(a){
@@ -105,8 +142,8 @@ function open_close(a){
         product_widely.classList.add("open")
         swiper_div_count(a);
         widely_product_content.innerHTML = product_widely_example;
-        let wide_projuct_place = document.getElementById("widely_product")
-        wide_projuct_place.innerHTML = swiper_div_adder;
+        const star= document.querySelectorAll(".stars");
+        star.forEach((starss) => starss.innerHTML = yyldyz.repeat(5))
 }
 const items = document.querySelectorAll(".item_click");
 
@@ -117,6 +154,7 @@ for (let i = 0; i < items.length; i++){
     })
 }
 
-
+const star= document.querySelectorAll(".stars");
+star.forEach((stars) => stars.innerHTML = yyldyz.repeat(5))
 
 

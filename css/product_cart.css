@@ -9,7 +9,7 @@
 .buttons_container{
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 1px;
 }
 
 .sms, .call{

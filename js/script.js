@@ -64,9 +64,9 @@ const swiper = new Swiper('.swiper', {
     },
   });   
 
-const yyldyz = `<i class="ri-star-fill"></i>`;
-const star= document.querySelectorAll(".stars");
-star.forEach((stars) => stars.innerHTML = yyldyz.repeat(5))
+// const yyldyz = `<i class="ri-star-fill"></i>`;
+// const star= document.querySelectorAll(".stars");
+// star.forEach((stars) => stars.innerHTML = yyldyz.repeat(5))
 
 const searchButton = document.querySelector(".t-search"),
     tClose = document.querySelector('.search-close'),
