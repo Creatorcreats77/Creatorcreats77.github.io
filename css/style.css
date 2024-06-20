@@ -1,7 +1,7 @@
-@font-face{
+/* @font-face{
     font-family: Poppins;
     src: url(./For_web/Poppins/Poppins-Regular.ttf);
-}
+} */
 :root {
     --primary-color: #ff6b6b;
     --secondary-color: #794afa;
