@@ -76,3 +76,14 @@
     margin: 1em 0;
 }
 
+.yza_gaytmak{
+    width: 99%;
+    padding: 10px 0;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--font-small);
+    background-color: rgb(216, 213, 213);
+    color: rgb(0, 0, 0);
+}
+

@@ -54,7 +54,9 @@ let product_example;
 let product_widely_example;
 let swiper_div;
 let swiper_div_adder;
-
+let widely_product_content;
+let product_widely;
+let wide_projuct_place;
 
 
 // creating products from API_products
@@ -99,7 +101,7 @@ function swiper_div_count(a){
         swiper_div = `<div class="swiper-slide"><img src="${place}" alt=""></div>`
         swiper_div_adder = swiper_div;
 
-        let wide_projuct_place = document.getElementById("widely_product")
+        wide_projuct_place = document.getElementById("widely_product")
         wide_projuct_place.innerHTML +=swiper_div_adder;
 
 
@@ -108,15 +110,20 @@ function swiper_div_count(a){
 `
     <b>${API_products[a].name_of_product}</b>
     <p>${API_products[a].about_product}</p>
-    <div class="flexwrap_2 flex-end">
-    <div class="stars"></div>
-    <div><span>${API_products[a].current_price}</span> TMT</div>
+    
+    <div class="three_butoons_container">
+        <div class="w-100">
+            <div class="flexwrap_2 flex-end">
+                <div class="stars"></div>
+                <div><span>${API_products[a].current_price}</span> TMT</div>
+            </div>
+            <div class="buttons_container_2">
+                <a href="sms:+99364629645;?&body=Salam%20${API_products[a].number}%20belgili%20harydyňyz%20barmy?" class="sms_2"><i class="ri-message-2-fill"></i><span>SMS etmek</span></a>
+                <a href="tel:+99364629645" class="call_2"><i class="ri-phone-fill"></i><span>Jaň etmek</span></a>
+            </div>
+            <div class="center_2"><button  onclick="Yza_gaytmak()" class="yza_gaytmak">Yza Gaýtmak <span><i class="ri-arrow-go-back-line"></i></span></button></div>
+        </div>
     </div>
-        <div class="buttons_container_2">
-        <a href="sms:+99364629645;?&body=Salam%20${API_products[a].number}%20belgili%20harydyňyz%20barmy?" class="sms_2"><i class="ri-message-2-fill"></i><span>SMS etmek</span></a>
-        <a href="tel:+99364629645" class="call_2"><i class="ri-phone-fill"></i><span>Jaň etmek</span></a>
-    </div>
-  
 `
 
     }
@@ -134,10 +141,10 @@ star.forEach((stars) => stars.innerHTML = yyldyz.repeat(5))
 function open_close(a){
     let products_main_first = document.getElementById("products_main_first")
    
-    let widely_product_content = document.getElementById("widely_product_content")
+    widely_product_content = document.getElementById("widely_product_content")
         products_main_first.classList.remove("open")
         products_main_first.classList.add("hide")
-    let product_widely = document.getElementById("product_widely")
+    product_widely = document.getElementById("product_widely")
         product_widely.classList.remove("hide")
         product_widely.classList.add("open")
         swiper_div_count(a);
@@ -145,6 +152,7 @@ function open_close(a){
         const star= document.querySelectorAll(".stars");
         star.forEach((starss) => starss.innerHTML = yyldyz.repeat(5))
 }
+
 const items = document.querySelectorAll(".item_click");
 
 for (let i = 0; i < items.length; i++){
@@ -153,8 +161,17 @@ for (let i = 0; i < items.length; i++){
         
     })
 }
-
 const star= document.querySelectorAll(".stars");
 star.forEach((stars) => stars.innerHTML = yyldyz.repeat(5))
 
+function Yza_gaytmak(){
+    widely_product_content = document.getElementById("widely_product_content")
+        products_main_first.classList.remove("hide")
+        products_main_first.classList.add("open")
+    product_widely = document.getElementById("product_widely")
+        product_widely.classList.remove("open")
+        product_widely.classList.add("hide")
+        wide_projuct_place = document.getElementById("widely_product")
+        wide_projuct_place.innerHTML ="";
+}
 

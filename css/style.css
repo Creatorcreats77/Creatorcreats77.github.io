@@ -1330,8 +1330,37 @@ SEARCH
     }
     .container_img {
         display: flex;
-        height: 600px;
     }
-      
+    .when_big_img{
+        width: 400px;
+        object-fit: cover;
+    }
+    .main_content{
+        position: relative;
+        width: 100%;
+    }
+    .three_butoons_container{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: end;
+        width: 100%;
+    }
+    .w-100{
+        width: 100%;
+    }
+    .products_widely .main_content{
+        margin: 40px 5px;
+    }
+    .products_widely .main_content p{
+        margin: 40px 5px;
+    }
+    .main_content b{
+        font-size: 32px;
+    }
+    .main_content p{
+        font-size: 24px;
+    }
 
 }
