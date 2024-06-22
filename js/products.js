@@ -57,12 +57,46 @@ let swiper_div_adder;
 let widely_product_content;
 let product_widely;
 let wide_projuct_place;
+let head_tag;
+let link;
 
+
+// function add_swiper_min_css(){
+//      link = document.createElement('link');
+//     link.rel = "stylesheet"
+//     link.href = "./css/swiper.min.css"
+//      head_tag = document.getElementsByTagName("head")[0]
+//     head_tag.appendChild(link)
+// }
+// function remove_swiper_min_css(){
+//     console.log(document.getElementsByTagName("head")[0])
+//     head_tag.removeChild(link)
+// }
+
+function swiperr(){
+    let swiper = new Swiper('.swiper', {
+        loop: true,
+        pagination : {
+            el: '.swiper-pagination',
+        },
+      }); 
+}
+
+function click_item(){
+    const items = document.querySelectorAll(".item_click");
+for (let i = 0; i < items.length; i++){
+    items[i].addEventListener("click", function(){
+        open_close(i)
+        console.log(i)
+        
+    })
+}
+}
 
 // creating products from API_products
 for (let  i = 0; i<API_products.length; i++){
     
-    console.log(API_products[i].img_a.length)
+    // console.log(API_products[i].img_a.length)
     
     
     product_example = 
@@ -125,7 +159,6 @@ function swiper_div_count(a){
         </div>
     </div>
 `
-
     }
     
 
@@ -139,6 +172,8 @@ star.forEach((stars) => stars.innerHTML = yyldyz.repeat(5))
 }
 
 function open_close(a){
+    // remove_swiper_min_css();
+    console.log("A inside open close is : " + a)
     let products_main_first = document.getElementById("products_main_first")
    
     widely_product_content = document.getElementById("widely_product_content")
@@ -151,27 +186,41 @@ function open_close(a){
         widely_product_content.innerHTML = product_widely_example;
         const star= document.querySelectorAll(".stars");
         star.forEach((starss) => starss.innerHTML = yyldyz.repeat(5))
-}
+        add_swiper_min_css()
+        swiperr()
 
-const items = document.querySelectorAll(".item_click");
-
-for (let i = 0; i < items.length; i++){
-    items[i].addEventListener("click", function(){
-        open_close(i)
         
-    })
 }
+
+
+
+
+
+// HER BLOGY BASYLANDA WIDELY_PROJECT ACYAR
+
+
+
+
+
+
 const star= document.querySelectorAll(".stars");
 star.forEach((stars) => stars.innerHTML = yyldyz.repeat(5))
 
 function Yza_gaytmak(){
+    wide_projuct_place = document.getElementById("widely_product")
+    wide_projuct_place.innerHTML ="";
     widely_product_content = document.getElementById("widely_product_content")
         products_main_first.classList.remove("hide")
         products_main_first.classList.add("open")
     product_widely = document.getElementById("product_widely")
         product_widely.classList.remove("open")
         product_widely.classList.add("hide")
-        wide_projuct_place = document.getElementById("widely_product")
-        wide_projuct_place.innerHTML ="";
+        swiperr()
+
 }
+
+// add_swiper_min_css();
+swiperr()
+click_item()
+
 

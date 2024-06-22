@@ -1,37 +1,3 @@
-// console.log("hello bally")
-// function copyMenu() {
-//     var dptCategory = document.querySelector('.dpt-cat');
-//     var dptPlace  =document.querySelector(".departments");
-//     dptPlace.innerHTML = dptCategory.innerHTML;
-
-
-//     var mainNav = document.querySelector('.header-nav nav');
-//     var navPlace  =document.querySelector(".off-canvas nav");
-//     navPlace.innerHTML = mainNav.innerHTML;
-
-//     var topNav = document.querySelector('.header-top .wrapper');
-//     var topPlace  =document.querySelector(".off-canvas .thetop-nav");
-//     topPlace.innerHTML = topNav.innerHTML;
-
-// }
-// copyMenu()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // show mobile menu 
 const menuButton = document.querySelector(".trigger"),
@@ -57,12 +23,12 @@ function toggle(e){
 }
 
 
-const swiper = new Swiper('.swiper', {
-    loop: true,
-    pagination : {
-        el: '.swiper-pagination',
-    },
-  });   
+// const sswiper = new Swiper('.swiper', {
+//     loop: true,
+//     pagination : {
+//         el: '.swiper-pagination',
+//     },
+//   });   
 
 // const yyldyz = `<i class="ri-star-fill"></i>`;
 // const star= document.querySelectorAll(".stars");
@@ -78,5 +44,3 @@ searchButton.addEventListener("click", function(){
 tClose.addEventListener("click", function(){
     showClass.classList.remove("showsearch")
 })
-
-console
