@@ -5,7 +5,7 @@
 :root {
     --primary-color: #ff6b6b;
     --secondary-color: #794afa;
-    --secondary-dark-color: #453c5c;
+    --secondary-dark-color: #1c399b;
     --bg-color-green: rgb(17, 184, 17);
 
     --white-color: #ffffff;
@@ -255,6 +255,7 @@ h4{
     position: relative;
     line-height: inherit;
     transition:  var(--trans-color);
+    margin-bottom: 10px;
 }
 
 
@@ -568,6 +569,7 @@ form.search button:hover{
 }
 .off-canvas .expand > :where(ul, .mega) {
     max-height: 2000px;
+    
 }
 .off-canvas .thetop-nav ul, .off-canvas nav > ul {
     flex-direction: column;
@@ -577,7 +579,18 @@ form.search button:hover{
     padding-top: 1.25em;
     margin: 1.25em 0;
     border-top: 1px solid var(--border-color);
+    border-bottom: 3px dotted var(--border-color);
+    /* margin-bottom: 20px; */
 }
+
+
+/* cepdaki panelin icindaki ul font uytgetmek ucin */
+nav span{
+    font-weight: var(--fw6);
+}
+
+
+
 .off-canvas nav .mega {
     padding: 0;
 }
@@ -1019,7 +1032,7 @@ SEARCH
 
 /* overlay */
 
-.overlay {
+#overlay {
     position: fixed;
     width: var(--percent100);
     height: var(--percent100);
@@ -1031,7 +1044,7 @@ SEARCH
     opacity: 0;
     will-change: visibility, opacity;
 }
-.showmenu .overlay {
+.overlay_2 {
     opacity: 1;
     visibility: inherit;
 }
@@ -1045,11 +1058,9 @@ SEARCH
     background-color: var(--bg-color-green);
 }
 
-.logo_nav_container {
-    position: absolute;
-    bottom: -63px;
-    right: -32px;
-    width: 108px;
+
+.logo_left{
+    width: 28px;
 }
 
 .header-nav .right {
@@ -1309,11 +1320,11 @@ SEARCH
     {
         display: flex;
         gap: 2em;
+        color: var(--white-color);
     }
     .header-nav .right_desktop ul li a:hover{
         text-decoration: underline;
-        color: green;
-
+        font-size: 18px;
     }
 
 

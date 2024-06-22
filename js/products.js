@@ -223,4 +223,3 @@ function Yza_gaytmak(){
 swiperr()
 click_item()
 
-
