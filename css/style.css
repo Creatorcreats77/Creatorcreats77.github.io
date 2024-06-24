@@ -3,6 +3,10 @@
     src: url(./For_web/Poppins/Poppins-Regular.ttf);
 } */
 :root {
+    /* menu bottom2 */
+    --clr: #222327;
+    /* menu bottom2 end */
+
     --primary-color: #ff6b6b;
     --secondary-color: #794afa;
     --secondary-dark-color: #1c399b;
@@ -889,6 +893,7 @@ nav span{
 .flexwrap .row {
     flex: 0 0 100%;
     width: 100%;
+    margin-top: 24px;
 }
 
 
@@ -955,6 +960,7 @@ nav span{
 }
 .footer-info .logo a{
     margin: 0 0 1em -0.75em;
+    width: 38px;
 }
 
 .footer-info .mini-text {
@@ -1315,6 +1321,7 @@ SEARCH
         position: relative;
         display: flex;
         align-items: center;
+        gap: 2em;
     }
     .header-nav .right_desktop ul
     {
