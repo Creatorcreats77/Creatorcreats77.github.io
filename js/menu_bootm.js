@@ -1,4 +1,5 @@
 function Yza_gaytmak(){
+    console.log(1)
     wide_projuct_place = document.getElementById("widely_product")
     wide_projuct_place.innerHTML ="";
     widely_product_content = document.getElementById("widely_product_content")
@@ -66,3 +67,4 @@ function calculate_screenBottom(a){
     indicator.style.transform =`translateX(${(d)}px)`
 }
 calculate_screenBottom(5)
+console.log(2)

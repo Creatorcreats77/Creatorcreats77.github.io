@@ -35,11 +35,11 @@
     --trans-color: color .3s;
 }
 
-*,::before,::after {
+*,::before:not(.gear_load, .wrapper_gear, .gear, .gear_load ul, .gear_load li),::after:not(.gear_load, .wrapper_gear, .gear, .gear_load ul, .gear_load li) {
     box-sizing: border-box;
 }
 
-*{
+*:not(.gear_load, .wrapper_gear, .gear, .gear_load ul, .gear_load li){
     margin: 0;
     padding: 0;
 }
@@ -1380,6 +1380,5 @@ SEARCH
     .main_content p{
         font-size: 24px;
     }
-    
 
 }
